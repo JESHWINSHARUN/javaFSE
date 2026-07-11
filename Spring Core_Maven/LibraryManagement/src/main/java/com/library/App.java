@@ -1,23 +1,20 @@
 package com.library;
 
-import com.library.service.BookService;
-//import jdk.jpackage.internal.ApplicationLayout;
-import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        //System.out.println( "Hello World!" );
-        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+import com.library.service.BookService;
 
-        BookService bookService=context.getBean(BookService.class);
+public class App {
 
-        bookService.displayBook();
+    public static void main(String[] args) {
+
+        ClassPathXmlApplicationContext context =
+                new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        BookService service = context.getBean(BookService.class);
+
+        service.displayBook();
+
+        context.close();
     }
 }
