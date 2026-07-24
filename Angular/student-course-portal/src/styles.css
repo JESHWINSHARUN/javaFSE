@@ -1,0 +1,6 @@
+body { font-family: Arial, sans-serif; margin: 0; }
+.ng-invalid.ng-touched { border-color: red; }
+.ng-valid.ng-touched { border-color: green; }
+.badge-green { color: green; }
+.badge-red { color: red; }
+.badge-grey { color: grey; }
